@@ -1,0 +1,41 @@
+# 42 Pac-Man default configuration.
+# Full-line comments start with # or // and are stripped before parsing.
+# Every key is optional: missing or invalid values fall back to a
+# documented default and are reported on stdout, never as a traceback.
+{
+  "highscore_filename": "highscores.json",
+  "lives": 3,
+
+  // Fraction of free corridor cells that receive a pacgum.
+  "pacgum_density": 0.72,
+
+  "points_per_pacgum": 10,
+  "points_per_super_pacgum": 50,
+  "points_per_ghost": 200,
+
+  // Seed of the first level only; later levels are random.
+  "seed": 42,
+
+  "ghost_respawn_seconds": 5,
+  "super_duration_seconds": 7,
+  "player_step_seconds": 0.15,
+
+  "window_width": 1000,
+  "window_height": 900,
+
+  // Ten levels of growing size. Each time limit is scaled to the maze
+  // area so a level stays clearable; omit level_max_time to let the
+  // game derive it from width and height.
+  "levels": [
+    {"width": 21, "height": 21, "level_max_time": 115},
+    {"width": 21, "height": 23, "level_max_time": 126},
+    {"width": 23, "height": 23, "level_max_time": 138},
+    {"width": 23, "height": 25, "level_max_time": 150},
+    {"width": 25, "height": 25, "level_max_time": 163},
+    {"width": 25, "height": 27, "level_max_time": 176},
+    {"width": 27, "height": 27, "level_max_time": 190},
+    {"width": 27, "height": 29, "level_max_time": 204},
+    {"width": 29, "height": 29, "level_max_time": 219},
+    {"width": 29, "height": 31, "level_max_time": 234}
+  ]
+}
